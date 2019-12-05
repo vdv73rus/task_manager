@@ -1,4 +1,5 @@
-version: '2'
+version: '3.7'
+
 services:
   web:
     build: .
@@ -6,15 +7,22 @@ services:
       - db
     volumes:
       - .:/task_manager:cached
+      - ~/.bash_history:/root/.bash_history
+      - bundle_cache:/bundle_cache
     ports:
       - 3000:3000
-    volumes_from:
-      - bundle_cache
     environment:
-      BUNDLE_PATH: /bundle_cache
+      - BUNDLE_PATH=/bundle_cache
+      - GEM_HOME=/bundle_cache
+      - GEM_PATH=/bundle_cache
+      - DATABASE_HOST=db
+      - DATABASE_USERNAME=postgres
   db:
     image: postgres:10.3-alpine
   bundle_cache:
     image: busybox
     volumes:
-      - /bundle_cache
+      - bundle_cache:/bundle_cache
+
+volumes:
+  bundle_cache:
