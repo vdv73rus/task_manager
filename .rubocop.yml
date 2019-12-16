@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - bin/**/*
     - vendor/**/*
+    - db/schema.rb
     - node_modules/**/*
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
