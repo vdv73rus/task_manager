@@ -2,6 +2,7 @@ AllCops:
   TargetRubyVersion: 2.6.5
   Exclude:
     - bin/**/*
+    - vendor/**/*
     - node_modules/**/*
     - config/initializers/simple_form.rb
     - config/initializers/simple_form_bootstrap.rb
