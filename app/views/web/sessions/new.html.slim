@@ -1,0 +1,8 @@
+.container
+  .row
+    .col-lg-3
+      h3 Log in
+      = simple_form_for @session, url: session_path do |f|
+        = f.input :email, input_html: { autocomplete: 'email' }
+        = f.input :password, input_html: { autocomplete: 'current-password' }
+        = f.button :submit, "Sign in", class: 'btn-primary'
