@@ -1,0 +1,18 @@
+AllCops:
+  TargetRubyVersion: 2.6.5
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - db/schema.rb
+    - node_modules/**/*
+    - config/initializers/simple_form.rb
+    - config/initializers/simple_form_bootstrap.rb
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false

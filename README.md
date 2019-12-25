@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/vdv73rus/task_manager.svg?branch=master)](https://travis-ci.com/vdv73rus/task_manager)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
